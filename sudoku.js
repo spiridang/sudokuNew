@@ -5,6 +5,7 @@ function read() {
   return allSudoku;
 }
 const arrSudoku = read();
+// console.log(arrSudoku);
 
 function solve() {
   const strokes = arrSudoku.map((el) => el.split(""));
@@ -15,13 +16,21 @@ function solve() {
     let arrIn = one.splice(0, 9);
     newArr.push(arrIn);
   }
+
+  for (let i = 0; i < newArr.length; i += 1) {
+    for (let j = 0; j < newArr.length; j += 1) {
+      if (newArr[i][j] === "-") {
+        newArr[i][j] = Math.floor(Math.random() * 9) + 1;
+      } else {
+        newArr[i].length === new Set(newArr[i]).size;
+      }
+    }
+  }
   return newArr;
 }
 
 const arraysOne = solve();
-console.log(arraysOne);
-
-
+console.table(arraysOne);
 
 /**
  * Принимает игровое поле в том формате, в котором его вернули из функции read.
