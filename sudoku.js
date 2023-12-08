@@ -16,8 +16,7 @@ function solve() {
   }
   return newArr;
 }
-const arraysOne = solve();
-console.log(arraysOne);
+solve();
 /**
  * Принимает игровое поле в том формате, в котором его вернули из функции read.
  * Возвращает игровое поле после попытки его решить.
