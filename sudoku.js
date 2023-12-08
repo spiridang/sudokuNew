@@ -17,8 +17,10 @@ function solve() {
   }
   return newArr;
 }
+
 const arraysOne = solve();
 console.log(arraysOne);
+
 
 
 /**
