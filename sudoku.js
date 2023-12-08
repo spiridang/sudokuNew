@@ -1,16 +1,31 @@
- function read() {
-   
-  /**
-   * Прочесть файл puzzles.txt в кодировке 'utf-8' и вернуть эти данные из функции
-   */
+const fs = require("fs");
+const { EOL } = require("os");
+function read() {
+  const allSudoku = fs.readFileSync("./puzzles.txt", "utf-8").trim().split(EOL);
+  return allSudoku;
 }
+const arrSudoku = read();
 
 function solve() {
-  /**
-   * Принимает игровое поле в том формате, в котором его вернули из функции read.
-   * Возвращает игровое поле после попытки его решить.
-   */
+  const strokes = arrSudoku.map((el) => el.split(""));
+  const one = strokes[0];
+
+  // console.log(one);
+  return one;
+  // for (let i = 0; i <= 8; i++) {
+  // let result[i] = [];
+  // result[i].push (one.shift());
+  // console.log(result[i]);
+  // }
+ 
 }
+solve()
+
+
+/**
+ * Принимает игровое поле в том формате, в котором его вернули из функции read.
+ * Возвращает игровое поле после попытки его решить.
+ */
 
 function isSolved() {
   /**
