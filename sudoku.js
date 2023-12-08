@@ -7,11 +7,10 @@ function read() {
 const arrSudoku = read();
 
 function solve() {
-  const strokes = arrSudoku.map((el) => el.split(""));
-  const one = strokes[0];
-
-  console.log(one);
-  return one;
+  const stroke = arrSudoku.map((el) => el.split(""));
+  for (let i = 0; i < stroke.length; i += 1) {
+    stroke.slice(0,9)
+  }
 }
 solve();
 /**
