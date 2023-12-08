@@ -10,10 +10,22 @@ function solve() {
   const strokes = arrSudoku.map((el) => el.split(""));
   const one = strokes[0];
 
-  console.log(one);
-  return one;
+  // for (let i = 0; i < one.length; i += 1) {
+  //   if (one[i] === "-") {
+  //     one[i] = NaN;
+  //   }
+  // }
+  // console.log(one);
+  // return one;
+  let newArr = [];
+  for (let i = 0; i < one.length; i += 1) {
+    let arrIn = one.splice(0, 9);
+    newArr.push(arrIn);
+  }
+  return newArr;
 }
-solve();
+const arraysOne = solve();
+console.log(arraysOne);
 /**
  * Принимает игровое поле в том формате, в котором его вернули из функции read.
  * Возвращает игровое поле после попытки его решить.
