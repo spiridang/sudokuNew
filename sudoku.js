@@ -9,14 +9,6 @@ const arrSudoku = read();
 function solve() {
   const strokes = arrSudoku.map((el) => el.split(""));
   const one = strokes[0];
-
-  // for (let i = 0; i < one.length; i += 1) {
-  //   if (one[i] === "-") {
-  //     one[i] = NaN;
-  //   }
-  // }
-  // console.log(one);
-  // return one;
   let newArr = [];
   for (let i = 0; i < one.length; i += 1) {
     let arrIn = one.splice(0, 9);
