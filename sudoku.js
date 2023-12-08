@@ -9,6 +9,7 @@ const arrSudoku = read();
 function solve() {
   const strokes = arrSudoku.map((el) => el.split(""));
   const one = strokes[0];
+
   let newArr = [];
   for (let i = 0; i < one.length; i += 1) {
     let arrIn = one.splice(0, 9);
@@ -16,7 +17,12 @@ function solve() {
   }
   return newArr;
 }
-solve();
+
+const arraysOne = solve();
+console.log(arraysOne);
+
+
+
 /**
  * Принимает игровое поле в том формате, в котором его вернули из функции read.
  * Возвращает игровое поле после попытки его решить.
